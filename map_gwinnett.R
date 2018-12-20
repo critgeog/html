@@ -22,7 +22,8 @@ tm_shape(gw_ih) +
 t <- leaflet(gw_ih, width = "100%") %>%
   addProviderTiles("CartoDB.DarkMatterNoLabels") %>%
   setView(-83.97,33.95, zoom = 10) %>%
-  addCircles(col = "#4d89e2")
+  addMarkers(clusterOptions = markerClusterOptions())
+#  addCircles(col = "#4d89e2")
 
 t
 
